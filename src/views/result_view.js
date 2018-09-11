@@ -8,13 +8,18 @@ ResultView.prototype.bindEvents = function(){
   console.log("resultView log");
 
   PubSub.subscribe("InstrumentFamilies:instrument-all" , (event) =>{
-  const instrumentDetails  = event.detail;
-  console.log("has instrument family", instrumentDetails);
-});
+    const instrumentFamilyDetails  = event.detail;
+    this.render(instrumentFamilyDetails);
+    console.log("has instrument family", instrumentFamilyDetails);
+  });
 }
 
-ResultView.prototype.displayInstrumentFamily = function(){
-  console.log("hjj", );
-}
+ResultView.prototype.render = function(instrumentFamilyDetails){
+  console.log('has instrumentFamilyDetails', instrumentFamilyDetails);
+  const descriptionList = document.querySelector('#result');
+  console.log("co to jest", descriptionList);
+  // const paragraph = document.createElement('p');
+  descriptionList.textContent = `${instrumentFamilyDetails.description}`;
+};
 
 module.exports = ResultView;

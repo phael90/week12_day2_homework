@@ -36,7 +36,7 @@ InstrumentFamilies.prototype.bindEvents = function () {
      console.log('has instrument name:', instrumentName);
      const result = this.getInstrumentDetails(instrumentName);
      console.log('events has result:', result);
-     PubSub.publish('InstrumentFamilies:instrument-all', instrumentName);
+     PubSub.publish('InstrumentFamilies:instrument-all', result);
    });
  };
 
