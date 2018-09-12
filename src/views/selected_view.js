@@ -7,6 +7,17 @@ const SelectedView  = function(){
 SelectedView.prototype.bindEvents = function(){
   console.log("bananna1");
 
+
+
+
+
+
+
+
+
+
+
+
   const listOfInstruments = document.querySelector('#instrument-families');
   listOfInstruments.addEventListener('change', (event) => {
   const selectedInstrument = event.target.value;
